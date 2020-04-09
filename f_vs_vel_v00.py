@@ -1,5 +1,7 @@
+# Conversion of Craig Schindler's Matlab code: Force_vs_Velocity_test_structures_theoretical.mat
+# solves the ode for the force vs velocity of an ideal gap closer
+
 # imports
-import array as arr
 import numpy as np
 from scipy import integrate
 import matplotlib.pyplot as plt
@@ -86,6 +88,8 @@ for V in range(40, 110, 10):
 
         # def vdp1(t, y):
         #     return np.array([y[1], (1 - y[0] ** 2) * y[1] - y[0]])
+
+        ## code adapted from https://stackoverflow.com/questions/48428140/imitate-ode45-function-from-matlab-in-python
         t0, t1 = 0, 20  # start and end
         t = np.linspace(t0, t1, 100)  # the points of evaluation of solution
         # y0 = [2, 0]  # initial value
